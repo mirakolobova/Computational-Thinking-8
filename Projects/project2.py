@@ -44,11 +44,13 @@ elif answer5 == "C":
     cat_points -= 1
     dog_points -= 1
 
+print(f"Here are your points: dog {dog_points}, cat {cat_points}, fish {fish_points}")
+
 if dog_points >= cat_points and dog_points >= fish_points:
     print("You are a dog person")
 elif fish_points >= cat_points and fish_points >= dog_points:
     print("You are a fish person")
 elif cat_points >= dog_points and cat_points >= fish_points:
-    print("You are a dog person")
+    print("You are a cat person")
 else:
     print("You are tied")
