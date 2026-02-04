@@ -1,13 +1,7 @@
 import turtle, time, random
 from utils import *
-#Controls
-#J = Job, you lose 1 happiness and get 1 dollar
-#F = food, you get food for 1 dollar and gain 1 happiness
-#E = entertainment, you get entertainment for 1 dollar and gain 1 happiness
 #Goal
 #Don't let your character have no money and no happiness
-
-
 
 # Section 1 - setup
 # TODO - set a background using set_background()
@@ -26,6 +20,7 @@ create_sprite("person", 50,50)
 # TODO - define an action. ex: def my_control()
 
 def make_money():
+#J = Job, you lose 1 happiness and get 1 dollar
     global money, happiness
     money += 1
     happiness -= 1
@@ -33,6 +28,7 @@ window.onkeypress(make_money, "j")
 
 def get_entertainment():
     global entertainment, happiness, money
+#E = entertainment, you get entertainment for 1 dollar and gain 1 happiness
     if money >= 1:
         entertainment += 1
         happiness += 1
@@ -48,6 +44,7 @@ def get_entertainment():
 window.onkeypress(get_entertainment, "e")
 
 def get_food():
+#F = food, you get food for 1 dollar and gain 1 happiness
     global food, happiness, money
     if money >= 1:
         food += 1
